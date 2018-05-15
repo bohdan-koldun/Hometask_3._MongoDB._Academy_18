@@ -26,7 +26,7 @@
 
 ### 3 - Начиная от Math.ceil(avg + avg_alaska) (порядковый номер документа в БД ) найти первого человека с другом по имени Деннис
 
- **Для сохранения переменных avg и avg alaska используем курсоры
+ **Для сохранения переменных avg и avg alaska используем курсоры**
 `var cursor_avg = db.collectionUsers.aggregate([{$group: {_id: "avg_age_all_users", age: {$avg: "$age"}}}]);`
 
 `var avg = cursor_avg.hasNext() ? cursor_avg.next() : null;`
